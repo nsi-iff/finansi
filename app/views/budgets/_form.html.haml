@@ -1,0 +1,8 @@
+= semantic_form_for @budget do |form|
+  = form.input :year
+  = form.input :value
+  = form.input :source, :label_method => :acronym
+  = form.input :budget_item
+  .actions
+    = form.commit_button 'Save'
+

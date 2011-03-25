@@ -1,0 +1,17 @@
+%p
+  %b Year:
+  = @budget.year
+%p
+  %b Value:
+  = @budget.value.try(:real_contabil)
+%p
+  %b Source:
+  = @budget.source.try(:acronym)
+%p
+  %b Budget item:
+  = @budget.budget_item.try(:name)
+
+= link_to 'Edit', edit_budget_path(@budget)
+\|
+= link_to 'Back', budgets_path
+
