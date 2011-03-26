@@ -4,4 +4,5 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-GestaoFinanceira::Application.load_tasks
+Finansi::Application.load_tasks
+

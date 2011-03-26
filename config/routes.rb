@@ -1,4 +1,4 @@
-GestaoFinanceira::Application.routes.draw do
+Finansi::Application.routes.draw do
   resources :budgets do
     get :annual, :on => :collection
   end

@@ -1,4 +1,4 @@
-GestaoFinanceira::Application.configure do
+Finansi::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # The production environment is meant for finished, "live" apps.
@@ -47,3 +47,4 @@ GestaoFinanceira::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 end
+
