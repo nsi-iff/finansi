@@ -9,7 +9,7 @@ gem 'formtastic', '~>1.2.0'
 gem 'validation_reflection', '~>1.0.0'
 gem 'inherited_resources', '~>1.2.0'
 gem 'escape_utils', '~>0.2.0'
-gem 'brazilian-rails', '~>3.0.0'
+gem 'brdinheiro', '~>3.0.0'
 
 group :test, :development do
   gem 'factory_girl_rails', '~>1.0.0'
