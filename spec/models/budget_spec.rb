@@ -17,10 +17,11 @@ describe Budget do
         Budget.new(:year => 2003, :value => 2000, :source => renapi),
         Budget.new(:year => 2003, :value => 9000, :source => cnpq)])
       Budget.annual_table.should == [
-       ['Source/Year', 2001, 2002, 2003],
-       ['CEFET', 0.0, 4000.0, 7000.0],
-       ['RENAPI', 2000.0, 0.0, 10000.0],
-       ['CNPq', 3000.0, 6000.0, 9000.0]]
+       ['Source/Year', 2001, 2002, 2003, 'Total', '%'],
+       ['CEFET', 0.0, 4000.0, 7000.0, 11000.0, 26.829268292683],
+       ['RENAPI', 2000.0, 0.0, 10000.0, 12000.0, 29.268292682927],
+       ['CNPq', 3000.0, 6000.0, 9000.0, 18000.0, 43.90243902439],
+       ['Total', 5000.0, 10000.0, 26000.0, 41000.0, 100.0]]
     end
   end
 end
