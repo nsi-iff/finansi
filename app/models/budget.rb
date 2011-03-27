@@ -2,6 +2,15 @@ class Budget < ActiveRecord::Base
   belongs_to :source
   belongs_to :budget_item
 
+  def self.totals_by_source
+    totals = {}
+    Source.all.each do |source|
+      total = Budget.where('source_id = ?', source.id).map(&:value).sum
+      totals[source] = total if total > 0
+    end
+    totals
+  end
+
   def self.annual_table
     budgets = Budget.all
     years = budgets.map(&:year).uniq
