@@ -14,8 +14,8 @@ module NavigationHelpers
     when /the new budget page/
       new_budget_path
 
-    when /the annual budget page/
-      annual_budgets_path
+    when /the budget report page/
+      report_budgets_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

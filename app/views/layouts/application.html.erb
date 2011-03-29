@@ -3,7 +3,10 @@
 <head>
   <title>Financial Management</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag 'jquery.min', 'jquery.jqplot.min', 'jqplot.pieRenderer.lineLabels' %>
+  <%= javascript_include_tag 'jquery.min', 'jquery.jqplot.min',
+                             'jqplot.pieRenderer.lineLabels',
+                             'jqplot.barRenderer.min',
+                             'jqplot.categoryAxisRenderer.min' %>
   <%= csrf_meta_tag %>
 </head>
 <body>

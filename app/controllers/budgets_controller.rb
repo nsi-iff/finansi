@@ -1,7 +1,8 @@
 class BudgetsController < InheritedResources::Base
-  def annual
+  def report
     @budget_table = Budget.annual_table
-    @annual_data = Budget.totals_by_source.map {|source, total| [source.acronym, total] }
+    @total_by_source = Budget.totals_by_source.map {|source, total| [source.acronym, total] }
+    @total_by_year = Budget.totals_by_year.map {|year, value| [year, value]}
   end
 end
 

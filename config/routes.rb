@@ -1,6 +1,6 @@
 Finansi::Application.routes.draw do
   resources :budgets do
-    get :annual, :on => :collection
+    get :report, :on => :collection
   end
 
   # The priority is based upon order of creation:

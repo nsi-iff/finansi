@@ -1,4 +1,4 @@
-Feature: Annual budget
+Feature: Budget report
   As a group manager
   I want to check the group's annual budget
   In order to facilitate budget analysis
@@ -13,7 +13,7 @@ Feature: Annual budget
       | 2003 | 4000  | RENAPI    |
       | 2003 | 2000  | NEXEDI    |
       | 2003 | 1200  | CNPq      |
-    When I go to the annual budget page
+    When I go to the budget report page
     Then I should see the "annual-budget" table
       | Source/Year | 2001      | 2002      | 2003     | Total     | %      |
       | CEFET       | 2.000,00  | 0,00      | 0,00     | 2.000,00  | 4,68   |

@@ -42,5 +42,9 @@ class Budget < ActiveRecord::Base
     end
     table
   end
+
+  def self.totals_by_year
+    group('year').order('year').sum('value')
+  end
 end
 
