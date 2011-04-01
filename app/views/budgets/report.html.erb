@@ -12,6 +12,11 @@
       chart-data='<%=raw @total_by_year.map {|pair| pair[1]}.inspect %>'
       chart-column-data='<%=raw @total_by_year.map {|pair| pair[0]}.inspect %>'></div>
 
+<div id="budget-by-source-annual-evolution" class="chart"
+     chart-data='<%=raw @budget_by_source_annual_evolution.inspect %>'
+     chart-column-data='<%= @sources.inspect %>'
+     chart-legend='[<%= @years.map {|y| "{label: \"#{y}\"}" }.join(',') %>]'></div>
+
 <script type="text/javascript">
 
 </script>

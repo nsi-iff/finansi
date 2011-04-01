@@ -40,6 +40,14 @@ describe Budget do
         2003 => 26_000.0
       }
     end
+
+    it 'calculates budget by source annual evolution' do
+      Budget.budget_by_source_annual_evolution.should == {
+        2001 => { @renapi => 2_000, @cnpq => 3_000 },
+        2002 => { @cefet => 4_000, @cnpq => 6_000 },
+        2003 => { @cefet => 7_000, @renapi => 10_000, @cnpq => 9_000 }
+      }
+    end
   end
 end
 

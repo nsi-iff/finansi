@@ -46,5 +46,14 @@ class Budget < ActiveRecord::Base
   def self.totals_by_year
     group('year').order('year').sum('value')
   end
+
+  def self.budget_by_source_annual_evolution
+    result = {}
+    group('year').group('source_id').sum('value').each do |pair, sum|
+      result[pair[0]] ||= {}
+      result[pair[0]].merge!(Source.find(pair[1]) => sum)
+    end
+    result
+  end
 end
 
