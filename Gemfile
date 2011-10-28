@@ -1,6 +1,6 @@
 source :rubygems, :gemcutter
 
-gem 'rails', '3.0.5'
+gem 'rails', '3.0.10'
 
 gem 'pg', '~>0.10.0'
 
