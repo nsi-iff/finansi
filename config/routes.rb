@@ -3,6 +3,9 @@ Finansi::Application.routes.draw do
     get :report, :on => :collection
   end
 
+  resources :sources
+  resources :budget_items
+
   root :to => 'home#index'
 
   # The priority is based upon order of creation:

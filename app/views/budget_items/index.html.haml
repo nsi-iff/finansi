@@ -1,0 +1,19 @@
+%h1 Listing budget_items
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @budget_items.each do |budget_item|
+    %tr
+      %td= budget_item.name
+      %td= link_to 'Show', budget_item
+      %td= link_to 'Edit', edit_budget_item_path(budget_item)
+      %td= link_to 'Destroy', budget_item, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Budget item', new_budget_item_path

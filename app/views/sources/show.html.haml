@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Acronym:
+  = @source.acronym
+
+= link_to 'Edit', edit_source_path(@source)
+\|
+= link_to 'Back', sources_path

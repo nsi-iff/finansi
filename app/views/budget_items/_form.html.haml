@@ -1,0 +1,13 @@
+= form_for @budget_item do |f|
+  -if @budget_item.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@budget_item.errors.count, "error")} prohibited this budget_item from being saved:"
+      %ul
+        - @budget_item.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit 'Save'

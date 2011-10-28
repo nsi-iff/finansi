@@ -1,0 +1,19 @@
+%h1 Listing sources
+
+%table
+  %tr
+    %th Acronym
+    %th
+    %th
+    %th
+
+  - @sources.each do |source|
+    %tr
+      %td= source.acronym
+      %td= link_to 'Show', source
+      %td= link_to 'Edit', edit_source_path(source)
+      %td= link_to 'Destroy', source, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Source', new_source_path

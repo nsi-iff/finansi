@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @budget_item.name
+
+= link_to 'Edit', edit_budget_item_path(@budget_item)
+\|
+= link_to 'Back', budget_items_path
