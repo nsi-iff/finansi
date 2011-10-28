@@ -20,7 +20,7 @@ end
 
 group :cucumber do
   gem 'launchy', '~>0.3.0'
-  gem 'capybara', '~>0.4.0'
+  gem 'capybara', '~>1.1.0'
   gem "rspec-rails", "~>2.5.0"
   gem 'cucumber-rails', '~>0.3.0'
   gem 'database_cleaner', '~>0.6.0'
